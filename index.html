@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricelist Balada Cerita</title>
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons via CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Base font */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    /* Custom Scrollbar for better look */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #050b14;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #06b6d4; /* cyan-500 */
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #0891b2; /* cyan-600 */
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-[#050b14] relative overflow-x-hidden font-sans selection:bg-cyan-500 selection:text-white">
+
+  <!-- Abstract Background Glows for Glass Effect -->
+  <div class="fixed top-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-600 rounded-full mix-blend-screen filter blur-[150px] opacity-30 animate-pulse pointer-events-none z-0"></div>
+  <div class="fixed top-[20%] right-[-10%] w-[600px] h-[600px] bg-indigo-600 rounded-full mix-blend-screen filter blur-[150px] opacity-20 pointer-events-none z-0"></div>
+  <div class="fixed bottom-[-10%] left-[20%] w-[500px] h-[500px] bg-cyan-600 rounded-full mix-blend-screen filter blur-[150px] opacity-20 pointer-events-none z-0"></div>
+
+  <!-- Main Content -->
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-cyan-400 font-semibold tracking-widest uppercase text-sm mb-2">Price List 2026</h2>
+      <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4 drop-shadow-lg">
+        Graduation Packages
+      </h1>
+      <p class="text-blue-200 max-w-2xl mx-auto text-lg">
+        Abadikan momen kelulusanmu dengan gaya elegan bersama Balada Cerita.
+      </p>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-12" id="tabs-container">
+      <button onclick="switchTab('personal')" data-tab="personal" class="tab-btn flex items-center px-5 py-3 rounded-full text-sm font-semibold transition-all duration-300 backdrop-blur-md border bg-cyan-500/80 border-cyan-400 text-white shadow-[0_0_15px_rgba(6,182,212,0.5)]">
+        <i data-lucide="camera" class="w-4 h-4 mr-2"></i> Personal
+      </button>
+      <button onclick="switchTab('group')" data-tab="group" class="tab-btn flex items-center px-5 py-3 rounded-full text-sm font-semibold transition-all duration-300 backdrop-blur-md border bg-white/5 border-white/10 text-blue-200 hover:bg-white/10 hover:text-white">
+        <i data-lucide="users" class="w-4 h-4 mr-2"></i> Group
+      </button>
+      <button onclick="switchTab('video')" data-tab="video" class="tab-btn flex items-center px-5 py-3 rounded-full text-sm font-semibold transition-all duration-300 backdrop-blur-md border bg-white/5 border-white/10 text-blue-200 hover:bg-white/10 hover:text-white">
+        <i data-lucide="video" class="w-4 h-4 mr-2"></i> Video
+      </button>
+      <button onclick="switchTab('info')" data-tab="info" class="tab-btn flex items-center px-5 py-3 rounded-full text-sm font-semibold transition-all duration-300 backdrop-blur-md border bg-white/5 border-white/10 text-blue-200 hover:bg-white/10 hover:text-white">
+        <i data-lucide="info" class="w-4 h-4 mr-2"></i> Info & Add-ons
+      </button>
+      <button onclick="window.open('https://www.instagram.com/baladaceritaa/', '_blank', 'noopener,noreferrer')" class="flex items-center px-5 py-3 rounded-full text-sm font-semibold transition-all duration-300 backdrop-blur-md border bg-white/5 border-white/10 text-blue-200 hover:bg-white/10 hover:text-white">
+        <i data-lucide="instagram" class="w-4 h-4 mr-2"></i> Portfolio
+      </button>
+      <button onclick="window.open('https://wa.me/6285373863898?text=Halo%20Balada%20Cerita,%20saya%20ingin%20konsultasi/booking%20sesi%20foto.', '_blank', 'noopener,noreferrer')" class="flex items-center px-5 py-3 rounded-full text-sm font-semibold transition-all duration-300 backdrop-blur-md border bg-white/5 border-white/10 text-blue-200 hover:bg-white/10 hover:text-white">
+        <i data-lucide="message-circle" class="w-4 h-4 mr-2"></i> Konsultasi & Book
+      </button>
+    </div>
+
+    <!-- Content Area -->
+    <div class="min-h-[50vh]">
+      
+      <!-- Personal Packages -->
+      <div id="personal" class="tab-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Rendered by JS -->
+      </div>
+
+      <!-- Group Packages -->
+      <div id="group" class="tab-content hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <!-- Rendered by JS -->
+      </div>
+
+      <!-- Video Packages -->
+      <div id="video" class="tab-content hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto justify-center">
+        <!-- Content Rendered by JS, Plus Cinematic Info Block -->
+        <div id="video-cards" class="contents"></div>
+        <div class="flex flex-col justify-center items-center text-center p-8 bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl rounded-2xl">
+          <i data-lucide="video" class="w-16 h-16 text-cyan-400/50 mb-4"></i>
+          <h3 class="text-xl font-bold text-white mb-2">Cinematic Memories</h3>
+          <p class="text-blue-100/80 text-sm">
+            Setiap detik kelulusanmu adalah cerita yang layak diabadikan. Paket video kami memastikan momen bergerak terekam sempurna.
+          </p>
+        </div>
+      </div>
+
+      <!-- Info & Add-ons -->
+      <div id="info" class="tab-content hidden grid grid-cols-1 lg:grid-cols-2 gap-8">
+        
+        <!-- Additional -->
+        <div class="p-8 bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl rounded-2xl">
+          <h3 class="flex items-center text-2xl font-bold text-white mb-6 border-b border-white/10 pb-4">
+            <i data-lucide="plus-circle" class="mr-3 text-cyan-400"></i> Additional
+          </h3>
+          <ul class="space-y-4" id="additional-list">
+            <!-- Rendered by JS -->
+          </ul>
+        </div>
+
+        <!-- Terms & Conditions -->
+        <div class="p-8 bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl rounded-2xl">
+          <h3 class="flex items-center text-2xl font-bold text-white mb-6 border-b border-white/10 pb-4">
+            <i data-lucide="alert-circle" class="mr-3 text-cyan-400"></i> Pelunasan, Transfer & Edit
+          </h3>
+          <ol class="space-y-4" id="terms-list">
+            <!-- Rendered by JS -->
+          </ol>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-20 pt-8 border-t border-white/10 text-center">
+      <h2 class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 mb-2">
+        Teurimong Geunaseh
+      </h2>
+      <p class="text-blue-200/60 mb-6">Mari berhubung dan bercerita di Balada Cerita.</p>
+      
+      <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
+        <a href="https://www.instagram.com/baladaceritaa/" target="_blank" rel="noopener noreferrer" class="flex items-center text-blue-200 hover:text-cyan-400 transition-colors">
+          <i data-lucide="instagram" class="w-5 h-5 mr-2"></i> @baladaceritaa
+        </a>
+        <span class="hidden sm:inline text-blue-200/30">|</span>
+        <a href="https://wa.me/6285373863898" target="_blank" rel="noopener noreferrer" class="flex items-center text-blue-200 hover:text-cyan-400 transition-colors">
+          <i data-lucide="message-circle" class="w-5 h-5 mr-2"></i> 085373863898
+        </a>
+      </div>
+
+      <div class="text-blue-200/40 text-sm">
+        &copy; 2026 Balada Cerita. All Rights Reserved.
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Main JavaScript Logic -->
+  <script>
+    // Data structures mirroring the React state
+    const personalPackages = [
+      {
+        name: "BALADA ESSENTIAL", price: "500K",
+        features: [
+          { icon: 'users', text: "1 Graduate" },
+          { icon: 'clock', text: "60 Minute Session" },
+          { icon: 'map-pin', text: "1 Location" },
+          { icon: 'image', text: "20 Edited Photo" },
+          { icon: 'camera', text: "Unlimited Shoots" },
+          { icon: 'users', text: "Session with Family & Friend" },
+          { icon: 'hard-drive', text: "All Soft File on Google Drive" }
+        ]
+      },
+      {
+        name: "BALADA SIGNATURE", price: "600K", isPopular: true,
+        features: [
+          { icon: 'users', text: "1 Graduate" },
+          { icon: 'clock', text: "90 Minute Session" },
+          { icon: 'map-pin', text: "1 Location" },
+          { icon: 'image', text: "30 Edited Photo" },
+          { icon: 'camera', text: "Unlimited Shoots" },
+          { icon: 'users', text: "Session with Family & Friend" },
+          { icon: 'hard-drive', text: "All Soft File on Google Drive" }
+        ]
+      },
+      {
+        name: "BALADA EXCLUSIVE", price: "700K",
+        features: [
+          { icon: 'users', text: "1 Graduate" },
+          { icon: 'clock', text: "120 Minute Session" },
+          { icon: 'map-pin', text: "2 Location" },
+          { icon: 'image', text: "50 Edited Photo" },
+          { icon: 'camera', text: "Unlimited Shoots" },
+          { icon: 'users', text: "Session with Family & Friend" },
+          { icon: 'hard-drive', text: "All Soft File on Google Drive" }
+        ]
+      }
+    ];
+
+    const groupPackages = [
+      {
+        name: "GROUP A", price: "600K",
+        features: [
+          { icon: 'users', text: "Maximal 6 Graduate" },
+          { icon: 'clock', text: "60 Minute Session" },
+          { icon: 'map-pin', text: "1 Location" },
+          { icon: 'image', text: "40 Edited Photo" },
+          { icon: 'camera', text: "Unlimited Shoots" },
+          { icon: 'camera', text: "Group & Personal Photo Session" },
+          { icon: 'hard-drive', text: "All Soft File on Google Drive" }
+        ]
+      },
+      {
+        name: "GROUP B", price: "800K", isPopular: true,
+        features: [
+          { icon: 'users', text: "Maximal 8 Graduate" },
+          { icon: 'clock', text: "120 Minute Session" },
+          { icon: 'map-pin', text: "2 Location" },
+          { icon: 'image', text: "50 Edited Photo" },
+          { icon: 'camera', text: "Unlimited Shoots" },
+          { icon: 'camera', text: "Group & Personal Photo Session" },
+          { icon: 'hard-drive', text: "All Soft File on Google Drive" }
+        ]
+      }
+    ];
+
+    const videoPackages = [
+      {
+        name: "VIDEO GRAD", price: "500K",
+        features: [
+          { icon: 'users', text: "Include Family Season" },
+          { icon: 'map-pin', text: "1 Location" },
+          { icon: 'clock', text: "60 Minute Video Shooting" },
+          { icon: 'video', text: "Video Editing 1 Minute" }
+        ]
+      }
+    ];
+
+    const additionalItems = [
+      { text: "Extra Person (Outdoor)", price: "IDR 80K (Group Only)" },
+      { text: "Extra Time (Personal, Couple)", price: "IDR 100K / 30 Menit" },
+      { text: "Extra Time (Group)", price: "IDR 120K / 30 Menit" },
+      { text: "Extra Edit", price: "IDR 50K / 10 Foto" }
+    ];
+
+    const termsAndConditions = [
+      "File original akan dikirim setelah kamu melakukan pelunasan maksimal H+1.",
+      "Silahkan download semua filenya dari Google Drive, karena file tidak akan disimpan secara permanen dan dapat dihapus setelah beberapa waktu.",
+      "Lalu pilih foto terbaik menurutmu yang akan diedit setelah link Google Drive kamu terima.",
+      "Proses editing foto 3-7 hari kerja dan video 15 hari kerja.",
+      "Proses editing foto Same Day Edit 1 x 24 jam setelah list foto dikirim."
+    ];
+
+    // Reusable HTML generator for cards
+    function renderPackageCard(pkg) {
+      let popularBadge = '';
+      let borderClass = '';
+      
+      if (pkg.isPopular) {
+        popularBadge = `<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-lg tracking-wider">MOST POPULAR</div>`;
+        borderClass = 'border-cyan-400/50 shadow-cyan-500/20';
+      }
+
+      const featuresList = pkg.features.map(f => `
+        <li class="flex items-start text-blue-50">
+          <i data-lucide="${f.icon}" class="w-5 h-5 mr-3 text-cyan-400 shrink-0 mt-0.5"></i>
+          <span class="text-sm font-medium">${f.text}</span>
+        </li>
+      `).join('');
+
+      return `
+        <div class="relative flex flex-col p-6 sm:p-8 transition-all duration-300 hover:-translate-y-2 hover:bg-white/15 bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl rounded-2xl ${borderClass}">
+          ${popularBadge}
+          <div class="text-center mb-6">
+            <h3 class="text-xl font-bold text-white tracking-widest mb-2">${pkg.name}</h3>
+            <div class="text-4xl font-extrabold text-cyan-300">${pkg.price}</div>
+          </div>
+          <div class="flex-grow">
+            <ul class="space-y-4">
+              ${featuresList}
+            </ul>
+          </div>
+          <button onclick="window.open('https://wa.me/6285373863898?text=Halo%20Balada%20Cerita,%20saya%20mau%20konsultasi/booking%20untuk%20paket%20${encodeURIComponent(pkg.name)}', '_blank', 'noopener,noreferrer')" class="mt-8 w-full py-3 px-6 rounded-xl bg-white/10 hover:bg-cyan-500 text-white font-semibold border border-white/20 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm">
+            Book Now
+          </button>
+        </div>
+      `;
+    }
+
+    // Function to handle tab switching
+    function switchTab(tabId) {
+      // Hide all contents
+      document.querySelectorAll('.tab-content').forEach(el => {
+        el.classList.add('hidden');
+      });
+
+      // Reset all buttons to inactive state
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('bg-cyan-500/80', 'border-cyan-400', 'text-white', 'shadow-[0_0_15px_rgba(6,182,212,0.5)]');
+        btn.classList.add('bg-white/5', 'border-white/10', 'text-blue-200');
+      });
+
+      // Show selected content
+      document.getElementById(tabId).classList.remove('hidden');
+
+      // Set clicked button to active state
+      const activeBtn = document.querySelector(`.tab-btn[data-tab="${tabId}"]`);
+      if(activeBtn) {
+        activeBtn.classList.add('bg-cyan-500/80', 'border-cyan-400', 'text-white', 'shadow-[0_0_15px_rgba(6,182,212,0.5)]');
+        activeBtn.classList.remove('bg-white/5', 'border-white/10', 'text-blue-200');
+      }
+    }
+
+    // Initialize content on page load
+    document.addEventListener("DOMContentLoaded", () => {
+      // Inject Packages
+      document.getElementById('personal').innerHTML = personalPackages.map(renderPackageCard).join('');
+      document.getElementById('group').innerHTML = groupPackages.map(renderPackageCard).join('');
+      document.getElementById('video-cards').innerHTML = videoPackages.map(renderPackageCard).join('');
+
+      // Inject Additional Items
+      document.getElementById('additional-list').innerHTML = additionalItems.map(item => `
+        <li class="flex justify-between items-center bg-white/5 p-4 rounded-xl border border-white/5 hover:bg-white/10 transition-colors">
+          <span class="text-blue-50 font-medium">${item.text}</span>
+          <span class="text-cyan-300 font-bold bg-cyan-950/50 px-3 py-1 rounded-lg">${item.price}</span>
+        </li>
+      `).join('');
+
+      // Inject Terms & Conditions
+      document.getElementById('terms-list').innerHTML = termsAndConditions.map((term, idx) => `
+        <li class="flex text-blue-50">
+          <span class="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-cyan-500/20 text-cyan-400 text-xs font-bold mr-3 mt-0.5 border border-cyan-500/30">
+            ${idx + 1}
+          </span>
+          <span class="text-sm leading-relaxed text-blue-100/90">${term}</span>
+        </li>
+      `).join('');
+
+      // Render Lucide Icons
+      lucide.createIcons();
+    });
+
+  </script>
+</body>
+</html>
